@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.projects.kasirku.ui.fragments.HomeFragment"
+        android:label="Beranda"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/transaction"
+        android:name="com.projects.kasirku.ui.fragments.TransactionFragment"
+        android:label="Transaksi"
+        tools:layout="@layout/fragment_transaction" />
+
+    <fragment
+        android:id="@+id/transaction_history"
+        android:name="com.projects.kasirku.ui.fragments.slideshow.SlideshowFragment"
+        android:label="Riwayat Transaksi"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/rekap"
+        android:name="com.projects.kasirku.ui.fragments.tools.ToolsFragment"
+        android:label="Rekap Kas"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/summary"
+        android:name="com.projects.kasirku.ui.fragments.share.ShareFragment"
+        android:label="Rangkuman"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.projects.kasirku.ui.fragments.SettingFragment"
+        android:label="Pengaturan"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/help"
+        android:name="com.projects.kasirku.ui.fragments.SettingFragment"
+        android:label="Bantuan"
+        tools:layout="@layout/fragment_setting" />
+</navigation>

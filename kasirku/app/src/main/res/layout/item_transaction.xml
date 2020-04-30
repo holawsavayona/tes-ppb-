@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.projects.kasirku.helpers.TextHelper"/>
+        <variable
+            name="itemModel"
+            type="com.projects.kasirku.models.TransactionItemModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_bold"
+                android:textColor="@color/textDark"
+                android:textSize="@dimen/_10ssp"
+                android:text="@{itemModel.name}"
+                tools:text="Kecap ABCD"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/textNormal"
+                android:text="@{@string/tag_item_qty(itemModel.itemPrice, itemModel.quantity)}"
+                tools:text="Rp 1,000,000 x 3"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitosans_bold"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/textDark"
+            android:text="@{TextHelper.newInstance().rupiahValue(itemModel.itemTotalPrice)}"
+            tools:text="Rp 3,000,000"/>
+    </LinearLayout>
+</layout>
